@@ -1,7 +1,10 @@
 import math
 import re
 
+from utils.utils import timeit
 
+
+@timeit
 def run():
     with open("data/Day4.txt", "r") as file:
         cards = file.readlines()
