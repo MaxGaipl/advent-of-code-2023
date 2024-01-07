@@ -1,5 +1,7 @@
 import re
 
+from utils.utils import timeit
+
 
 def get_possible_gear_positions(input: list[str]) -> bool:
     gear_pattern = r"(?:\*)"
@@ -34,8 +36,9 @@ def get_gear_relevant_numbers(input: list[str], gear_position: list[int]) -> lis
     return relevant_numbers
 
 
+@timeit
 def run_task_2():
-    with open("Day3_Gear_Ratios/data.txt", "r") as file:
+    with open("data/Day3.txt", "r") as file:
         engine_schematic = file.readlines()
 
         gear_ratios = []
